@@ -49,6 +49,15 @@ public class MusicOrganizer
         }
     }
     
+    public void checkIndex(int num)
+    {
+        if ((getNumberOfFiles()-1)<num && 0<=num)
+        {
+            System.out.println("Error");
+        }
+            
+    }
+    
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
