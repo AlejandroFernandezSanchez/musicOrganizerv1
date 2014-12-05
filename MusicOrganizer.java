@@ -51,10 +51,20 @@ public class MusicOrganizer
     
     public void checkIndex(int num)
     {
-        if ((getNumberOfFiles()-1)<num && 0<=num)
+        if (num<0 || getNumberOfFiles()-1<num)
         {
-            System.out.println("Error");
+            if ( getNumberOfFiles()==0)
+            {
+                System.out.println("Error, no se ha añadido nada aun");
+            }
+            else
+            {
+                System.out.println("Error, el rango válido es entre 0 y "+ (getNumberOfFiles()-1));
+            }
+            
+            
         }
+        
             
     }
     
